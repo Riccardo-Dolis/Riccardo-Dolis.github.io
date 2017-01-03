@@ -1,44 +1,104 @@
-<html>
+<html> 
 <head>
+	<title>MONDOPALLA</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/monitor.css" media="screen">
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+  
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
- </head>
-<body>
-  <label> TOP 10 </label>
-  <table class="table table-striped">
-    <tr><td> MIGLIORI RAPPER </td> </tr>
-    <tr><td> Rapper </td><td> Classifica </td></tr>
-    <tr><td> Fedez </td><td> 1 </td></tr>
-    <tr><td> Francesco Paura </td><td> 2 </td></tr>
-    <tr><td> Uzzo </td><td> 3 </td></tr>
-    <tr><td> Emis Killa </td><td> 4 </td></tr>
-    <tr><td> Sfera Ebbasta </td><td> 5 </td></tr>
-    <tr><td> Dark Polo Gang </td><td> 6 </td></tr>
-    <tr><td> Danno </td><td> 7 </td></tr>
-    <tr><td> Mecna </td><td> 8 </td></tr>
-    <tr><td> Rula </td><td> 9 </td></tr>
-    <tr><td> Truce Baldazzi </td><td> 10 </td></tr>  
-  </table>
-  <button type="button" class="btn btn-danger"> Disaccordo</button>
-  <button type="button" class="btn btn-info">Concordo</button>
   
-  <label> TOP 10 </label>
-  <table class="table table-striped">
-    <tr><td> PEGGIORI RAPPER </td> </tr>
-    <tr><td> Rapper </td><td> Classifica </td></tr>
-    <tr><td> Neffa </td><td> 1 </td></tr>
-    <tr><td> Ice One </td><td> 2 </td></tr>
-    <tr><td> Ghemon </td><td> 3 </td></tr>
-    <tr><td> Kiave </td><td> 4 </td></tr>
-    <tr><td> Fabri Fibra </td><td> 5 </td></tr>
-    <tr><td> Izi </td><td> 6 </td></tr>
-    <tr><td> Clementino </td><td> 7 </td></tr>
-    <tr><td> Mondo Marcio </td><td> 8 </td></tr>
-    <tr><td> Sangue Misto </td><td> 9 </td></tr>
-    <tr><td> Yo Landi </td><td> 10 </td></tr>  
-  </table>
-  <button type="button" class="btn btn-danger"> Disaccordo</button>
-  <button type="button" class="btn btn-info">Concordo</button>
+  </head> 
+<body>
+<div id="container">
+	<header id="header">
+		<hgroup>
+			<h1 style="color:#EFEFEF;" >MONDOPALLA</h1>
+			<h2>Tutto sul rap a portata di un click</h2>
+			<a href="index.html" id="logo"><img src="img/php.png" alt="Logo" /></a>
+		</hgroup>
+		
+		 <ul class="topnav" id="myTopnav">
+		  <li><a href="#Top10">Top10</a></li>
+		  <li><a href="#Flop10">Flop10</a></li>
+      <li><a href="#paragone">Confronto</a></li>
+		  <li class="icon">
+		    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+		  </li>
+		</ul>
+	</header>
+  
+<div id="main-content">
+	<section>
+		<article id="Top10">
+			<label> TOP 10 </label>
+        <table class="table table-striped">
+          <tr><td> MIGLIORI RAPPER </td> </tr>
+          <tr><td> Rapper </td><td> Classifica </td></tr>
+          <tr><td> Fedez </td><td> 1 </td></tr>
+          <tr><td> Francesco Paura </td><td> 2 </td></tr>
+          <tr><td> Uzzo </td><td> 3 </td></tr>
+          <tr><td> Emis Killa </td><td> 4 </td></tr>
+          <tr><td> Sfera Ebbasta </td><td> 5 </td></tr>
+          <tr><td> Dark Polo Gang </td><td> 6 </td></tr>
+          <tr><td> Danno </td><td> 7 </td></tr>
+          <tr><td> Mecna </td><td> 8 </td></tr>
+          <tr><td> Rula </td><td> 9 </td></tr>
+          <tr><td> Truce Baldazzi </td><td> 10 </td></tr>  
+        </table>
+        <button type="button" class="btn btn-danger"> Disaccordo</button>
+        <button type="button" class="btn btn-info">Concordo</button> 
+		</article>
+		<article id="Flop10" class="last">
+      <label> FLOP 10 </label>
+         <table class="table table-striped">
+          <tr><td> PEGGIORI RAPPER </td> </tr>
+          <tr><td> Rapper </td><td> Classifica </td></tr>
+          <tr><td> Neffa </td><td> 1 </td></tr>
+          <tr><td> Ice One </td><td> 2 </td></tr>
+          <tr><td> Ghemon </td><td> 3 </td></tr>
+          <tr><td> Kiave </td><td> 4 </td></tr>
+          <tr><td> Fabri Fibra </td><td> 5 </td></tr>
+          <tr><td> Izi </td><td> 6 </td></tr>
+          <tr><td> Clementino </td><td> 7 </td></tr>
+          <tr><td> Mondo Marcio </td><td> 8 </td></tr>
+          <tr><td> Sangue Misto </td><td> 9 </td></tr>
+          <tr><td> Yo Landi </td><td> 10 </td></tr>  
+        </table>
+        <button type="button" class="btn btn-danger"> Disaccordo</button>
+        <button type="button" class="btn btn-info">Concordo</button>	
+		</article>
+	</section>	
+	<section style="background-color:#EFEFEF;" id="paragone"> 	
+    <label align="center">Confronto del mese:</label>	
+    <article>
+					<h3>GEMITAIZ</h3>
+					
+			</article>
+			<article class="last">
+					<h3>PIREZ</h3>
+					
+			</article>		
+	</section>
+</div>
+	<footer id="footer">
+		<div>
+			<p>@ 2016 tutti i diritti riservati - <em>Dolis Riccardo </em>- 2017 - per contattarmi invia un e-mail a: <em> raicard@live.it </em></p>
+		</div>		
+	</footer>
+</div>
+<script type="text/javascript">
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 </body>
 </html>
